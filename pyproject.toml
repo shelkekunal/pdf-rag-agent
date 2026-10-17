@@ -1,0 +1,31 @@
+[project]
+name = "pdf-rag-adk"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Kunal", email = "kunal13shelke@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "google-adk>=2.12.0",
+    "pypdf>=6.20.1",
+]
+
+[project.scripts]
+pdf-rag-adk = "pdf_rag_adk:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "reportlab>=5.0.1",
+]
+
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
